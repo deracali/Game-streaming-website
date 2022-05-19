@@ -1,16 +1,3 @@
-// slider
-let game_bx_1 = document.getElementById("game_bx_1");
-let game_bx_l_left_btn = document.getElementById("game_bx_l_left_btn");
-let game_bx_l_right_btn = document.getElementById("game_bx_l_right_btn");
-
-game_bx_l_left_btn.addEventListener("click", () => {
-  game_bx_1.scrollLeft -= 250;
-});
-
-game_bx_l_right_btn.addEventListener("click", () => {
-  game_bx_1.scrollLeft += 250;
-});
-
 // Day to night
 let day_night = document.getElementById("day_night");
 let day_night2 = document.getElementById("day_night2");
@@ -82,7 +69,7 @@ navigator.getBattery().then((battery) => {
 
 let wifi = document.getElementById("wifi");
 const wifi_change = () => {
-  if (navigator.online) {
+  if (navigator.onLine) {
     wifi.style.color = "var(--color-5)";
   } else {
     wifi.style.color = "#fff";
@@ -91,3 +78,8 @@ const wifi_change = () => {
 
 setInterval(wifi_change, 100);
 wifi_change();
+
+// 2nd Page Javascript
+let img_change = document.getElementById("img_change");
+
+// const change_img
